@@ -7,7 +7,8 @@ public class Beispiel2 {
 	 */
 	public static void main(String[] args) {
 		
-		String text = "If you optimize everything, \nyou will always be unhappy.\n\n- Donald Knuth";
+		String text = "If you optimize everything, \nyou will always be unhappy." +
+				"\n\n- Donald Knuth";
 		System.out.println(text);
 		String pattern = "(\n)+";
 		
