@@ -5,18 +5,8 @@ public class Natuerlich {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		/*int m, n, z = 1;
 		
-		for (int i = 1; i <= 324; i++) {
-			for (int j = 1; j <= i; j++) {
-				m = (i+1) - j;
-				n = (i+1) -m;
-				System.out.println("m=" + m + "; n=" + n + "; z=" + z(n, m));
-				z++;
-			}	
-		}*/
 		diagonal(52204);
-		//System.out.println(z[0] + "; " + z[1]);
 		
 	}
 	
