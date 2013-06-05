@@ -22,10 +22,11 @@ public class Natuerlich {
 	 */
 	static int[] diagonal(int i) {
 		int[] result = new int[2];
+		// result[0] = m, result[1] = n
 		
 		// Zunaechst wird ermittelt, in welcher Diagonale wir sind. 
 		// Die Diagonale nimmt mit jeder Reihe an Menge an Zahlenpaaren zu. 
-		// Die Einordnung der Indexe zu den Diagonalenreihen verhalten sich so: 
+		// Die Einordnung der Indizes zu den Diagonalenreihen verhalten sich so: 
 		//  1 |  2  |   3   |     5    |        6
 		// ---+-----+-------+----------+---------------
 		//  1 | 2 3 | 4 5 6 | 7 8 9 10 | 11 12 13 14 15  
@@ -45,7 +46,7 @@ public class Natuerlich {
 		 * +-----+-----+-----+-----+-----+
 		 * |  3  | 3;1 | 3;2 |     |     |
 		 * +-----+-----+-----+-----+-----+
-		 * |  4  | 4;4 |     |     |     |
+		 * |  4  | 4;1 |     |     |     |
 		 * +-----+-----+-----+-----+-----+
 		 * 
 		 * Das Zahlenpaar ist immer 1;<Diagonalenreihe>.
@@ -56,10 +57,10 @@ public class Natuerlich {
 		 * Die rechte Zahl laesst sich aus der Differenz der Diagonale und der linken Zahl des Paares bestimmen. 
 		 *  
 		 */
-		int n = 1 + (max - i);
-		int m = diagonale - n;
+		result[1] = 1 + (max - i);
+		result[0] = diagonale - result[1];
 		
-		System.out.println("m: " + m + "; n: " + n + "; z:" + z(m, n));
+		System.out.println("m: " + result[0] + "; n: " + result[1] + "; z:" + z(result[0], result[1]));
 		
 		return result;
 	}
